@@ -6,6 +6,7 @@ public class SiteChatInboundSetUserSettingsPacket extends SiteChatInboundPacket 
   protected boolean animateAvatars;
   protected String timestamp;
   protected boolean invisible;
+  protected boolean emoji;
   
   public boolean getCompact() {
     return compact;
@@ -42,5 +43,13 @@ public class SiteChatInboundSetUserSettingsPacket extends SiteChatInboundPacket 
   
   public void setInvisible(boolean invisible) {
     this.invisible = invisible;
+  }
+
+  public boolean getEmoji() {
+    return emoji;
+  }
+
+  public void setEmoji(boolean emoji) {
+    this.emoji = emoji;
   }
 }

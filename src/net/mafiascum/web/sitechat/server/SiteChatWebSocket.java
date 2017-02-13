@@ -39,9 +39,9 @@ public class SiteChatWebSocket implements WebSocketListener {
   }
 
   public void onWebSocketConnect(Session session) {
-    logger.trace(this.getClass().getSimpleName() + "#onWebSocketConnect   " + getIpAddress());
-    
     this.connection = (WebSocketSession)session;
+    
+    logger.trace(this.getClass().getSimpleName() + "#onWebSocketConnect   " + getIpAddress());
     
     server.queueEvent(new SiteChatServerOpenEvent(new Descriptor(id, getIpAddress())));
   }
